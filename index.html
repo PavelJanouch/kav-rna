@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavárna U Václava</title>
+    <title>Kavárna</title>
     <style>
         /* Resetování výchozích stylů prohlížeče */
         body, h1, h2, h3, h4, h5, h6, p, ul, li {
@@ -16,7 +16,10 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f5f5f5;
-            color: #333;
+            color: #fff; /* Změna barvy textu na bílou */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/fotos-premium/fondo-granos-cafe_76440-1285.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         /* Styly pro hlavičku */
@@ -24,11 +27,18 @@
             background-color: #333;
             color: #fff;
             padding: 15px 0;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
         }
 
         .logo h1 {
-            font-size: 32px;
+            font-size: 16px;
             margin: 0;
             font-weight: bold;
             color: #ffbb00; /* Zvýraznění barvy */
@@ -41,7 +51,7 @@
         nav ul {
             list-style-type: none;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
         }
 
         nav ul li {
@@ -56,7 +66,7 @@
         }
 
         nav ul li a:hover {
-            color: #ffbb00;
+            color: #000000;
         }
 
         /* Styly pro obsah */
@@ -64,23 +74,22 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            font-size: 48px;
         }
 
         section {
             padding: 40px 0;
             text-align: center;
-            border-top: 3px solid #333; /* Přidání pruhu nahoru */
-            border-bottom: 3px solid #333; /* Přidání pruhu dolů */
         }
 
         h1, h2, h3 {
             margin-bottom: 20px;
-            color: #333; /* Zvýraznění barvy */
+            color: #fff; /* Změna barvy textu na bílou */
         }
 
         p {
             font-size: 18px;
-            color: #333;
+            color: #fff; /* Změna barvy textu na bílou */
             margin-bottom: 20px;
         }
 
@@ -93,12 +102,13 @@
 
         .menu-item {
             margin: 0 15px;
-            border: 2px solid #ddd;
+            border: 2px solid #fff; /* Změna barvy ohraničení */
             border-radius: 15px; /* Zvětšení poloměru rohů */
             overflow: hidden;
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            font-size: 24px;
         }
 
         .menu-item:hover {
@@ -117,7 +127,7 @@
 
         .menu-item h3 {
             margin-bottom: 10px;
-            color: #333;
+            color: #fff; /* Změna barvy textu na bílou */
         }
 
         /* Styly pro patičku */
@@ -131,34 +141,48 @@
         footer p {
             margin-bottom: 10px;
         }
+
+        /* Styly pro kontejner úvodu */
+        #uvod.container {
+            padding: 120px 20px; /* Zvětšení vnějšího poloměru */
+            margin-top: 0; /* Posunutí nahoru */
+        }
+
+        /* Styly pro tlačítko */
+        .btn {
+            display: inline-block;
+            background-color: #ffdf4e;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffcc33;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Kavárna <span>U Václava</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#uvod">Úvod</a></li>
-                    <li><a href="#nabidka">Nabídka</a></li>
-                    <li><a href="#o-nas">O nás</a></li>
-                    <li><a href="#akce">Akce</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo kavárny" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#nabidka">Nabídka</a></li>
+                <li><a href="#o-nas">O nás</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="uvod">
-            <div class="container">
-                <h2>Vítejte v naší kavárně!</h2>
-                <p>
-                    Přijďte si užít jedinečnou atmosféru a vychutnat lahodné pochoutky v naší kavárně. Nechte se unést pohodlným posezením a neodolatelnou vůní čerstvě pražené kávy, která provoní každý kout našeho útulného prostoru. Užijte si okouzlující kombinaci chutí a vůní, které vám nabízíme ve formě lahodných dezertů, čerstvých pečiv a šťavnatých sendvičů, připravených s láskou a péčí našeho špičkového týmu. Přijďte do naší kavárny a dopřejte si okamžiky dokonalého potěšení pro vaše smysly.</p>
-                <a href="#nabidka" class="btn">Nabídka</a>
-            </div>
+        <section id="uvod" class="container">
+            <h2>Vítejte v kavárně!</h2>
+            <p>Rádi Vás přivítáme a představíme Vám naši nabídku.</p>
+            <a href="#nabidka" class="btn">Prohlédnout nabídku</a>
         </section>
 
         <section id="nabidka">
@@ -166,77 +190,43 @@
                 <h2>Nabídka</h2>
                 <div class="menu">
                     <div class="menu-item">
-                        <img src="data:image/jpeg;base64,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" alt="Káva">
+                        <img src="https://via.placeholder.com/300" alt="Káva">
                         <div class="menu-item-content">
                             <h3>Káva</h3>
-                            <p>Espresso, cappuccino, latte...</p>
+                            <p>Espresso, Cappuccino, Latte, Macchiato</p>
                         </div>
                     </div>
                     <div class="menu-item">
-                        <img src="data:image/jpeg;base64,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" alt="Dezert">
+                        <img src="https://via.placeholder.com/300" alt="Dezerty">
                         <div class="menu-item-content">
                             <h3>Dezerty</h3>
-                            <p>Cheesecake, tiramisu, zákusky...</p>
+                            <p>Tiramisu, Cheesecake, Zákusky</p>
                         </div>
                     </div>
-                    <!-- další položky menu -->
-                </div>
-            </div>
-        </section>
-
-        <section id="o-nas">
-            <div class="container">
-                <h2>O nás</h2>
-                <p>Jsme kavárna U Václava, která se specializuje na výrobu čerstvých kávových specialit a dezertů. Naše filozofie spočívá v poskytování nejen vynikajících produktů, ale také vytváření prostředí, které zve k odpočinku a relaxaci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisl dignissim, dignissim tortor in, malesuada elit. Quisque fringilla interdum purus, id scelerisque justo. Fusce ut nulla tortor. Vivamus condimentum ex velit, non consequat nisi aliquet quis. Praesent nec felis a velit scelerisque bibendum. Nunc at justo nunc. Donec ut odio justo. Curabitur ac tellus vel ligula venenatis dignissim. Suspendisse in est sed justo efficitur varius nec nec ligula. Ut vel sollicitudin ipsum. Maecenas scelerisque sem at risus accumsan, id dignissim turpis hendrerit. Aenean dignissim feugiat nulla, ac egestas arcu suscipit sit amet.</p>
-            </div>
-        </section>
-
-        <section id="akce">
-            <div class="container">
-                <h2>Akce</h2>
-                <div class="events">
-                    <div class="event-item">
-                        <img src="jazz-night.jpg" alt="Tematický večer: Jazz Night">
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/300" alt="Sendviče">
                         <div class="menu-item-content">
-                            <h3>Tematický večer: Jazz Night</h3>
-                            <p>Užijte si večer plný skvělé hudby a lahodných nápojů.</p>
+                            <h3>Sendviče</h3>
+                            <p>Bageta s pestem, Club sandwich, Tuna melt</p>
                         </div>
                     </div>
-                    <div class="event-item">
-                        <img src="degustace-kavy.jpg" alt="Degustace kávy">
-                        <div class="menu-item-content">
-                            <h3>Degustace kávy</h3>
-                            <p>Přijďte ochutnat nejlepší kávy z celého světa.</p>
-                        </div>
-                    </div>
-                    <!-- další akce -->
                 </div>
-            </div>
-        </section>
-
-        <section id="kontakt">
-            <div class="container">
-                <h2>Kontakt</h2>
-                <p>Navštivte nás na adrese:</p>
-                <p>Kavárna U Václava</p>
-                <p>Pražská 123</p>
-                <p>Česká Kamenice</p>
-                <p>Telefon: 123 456 789</p>
-                <p>Email: info@kavarna-vaclav.cz</p>
-                <p>Sledujte nás na sociálních sítích:</p>
-                <ul>
-                    <li><a href="https://www.facebook.com/kavarna-vaclav">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/kavarna-vaclav">Instagram</a></li>
-                    <li><a href="https://www.twitter.com/kavarna-vaclav">Twitter</a></li>
-                </ul>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Kavárna U Václava</p>
+            <p>&copy; 2024. Všechna práva vyhrazena.</p>
         </div>
     </footer>
+
+    <script>
+        // Posunutí obsahu níže
+        window.onload = function() {
+            window.scrollTo(0, 500);
+        };
+    </script>
 </body>
 </html>
+
