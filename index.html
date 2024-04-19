@@ -24,7 +24,7 @@
 
         /* Styly pro hlavičku */
         header {
-            background-color: #333;
+            background-color: rgb(80, 70, 70);
             color: #fff;
             padding: 15px 0;
             display: flex;
@@ -33,15 +33,19 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
+            position: relative; /* Přidání relative pozice */
+            left: 80px; /* Posunutí loga doprava */
         }
 
-        .logo h1 {
-            font-size: 16px;
-            margin: 0;
-            font-weight: bold;
-            color: #ffbb00; /* Zvýraznění barvy */
+        .logo img {
+            width: 180px; /* Změna šířky loga */
+        }
+
+        h1 {
+            font-size: 48px; /* Velikost názvu */
+            text-align: center; /* Zarovnání názvu doprostřed */
+            margin-top: 35px;
+            margin-left: 265px;
         }
 
         nav {
@@ -51,11 +55,11 @@
         nav ul {
             list-style-type: none;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; /* Zarovnání položek navigace doprava */
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin-right: 70px; /* Posunutí položek navigace doleva */
         }
 
         nav ul li a {
@@ -132,7 +136,7 @@
 
         /* Styly pro patičku */
         footer {
-            background-color: #333;
+            background-color: rgb(80, 70, 70);
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -153,7 +157,7 @@
             display: inline-block;
             background-color: #ffdf4e;
             color: #333;
-            padding: 10px 20px;
+            padding: 5px 10px;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
@@ -167,7 +171,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="img/logo.png" alt="logo kavárny" class="logo">
+            <img src="logo-removebg-preview.png" alt="logo kavárny">
+        </div>
+        <h1>Kavárna u Pavla</h1> <!-- Přidání názvu -->
         <nav>
             <ul>
                 <li><a href="#uvod">Úvod</a></li>
@@ -229,4 +235,3 @@
     </script>
 </body>
 </html>
-
